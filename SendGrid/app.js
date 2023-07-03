@@ -18,8 +18,8 @@ app.use(flash());
 
 // connect to mongoDB
 mongoose.set('strictQuery', true);
-// const conn = process.env.MDB_CONNECT;
-mongoose.connect('mongodb+srv://Abhishek-admin:Tango_0range@cluster0.hsdpq.mongodb.net/emailVerification', {
+const conn = process.env.MDB_CONNECT;
+mongoose.connect(conn, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 }, () => { console.log("Connected to MongoDB"); });
